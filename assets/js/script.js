@@ -17,10 +17,10 @@ $(function () {
 
   // loops through time block divs anc changes the classes based on time
   for(var i=0;i<timeblocks.length;i++) {
-    if(timeblocks[i].attributes[2].nodeValue < dayjs().format("H")-6){
+    if(timeblocks[i].attributes[2].nodeValue < dayjs().format("H")){
       timeblocks[i].classList.remove("past", "present", "future")
       timeblocks[i].classList.add('past')
-    } else if(timeblocks[i].attributes[2].nodeValue == dayjs().format("H")-6) {
+    } else if(timeblocks[i].attributes[2].nodeValue == dayjs().format("H")) {
       timeblocks[i].classList.remove("past", "present", "future")
       timeblocks[i].classList.add('present')
     } else {
